@@ -133,3 +133,37 @@ jobs:
               "tag": "${{ github.ref_name }}",
               "dms_repo": "${{ github.repository }}"
             }
+
+  bump-flake-version:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Update dms-cli version in flake.nix
+      run: |
+        sed -i \
+          "s/dms-cliVersion = \".*\"/dms-cliVersion = \"${GITHUB_REF#refs/tags/}\"/" \
+          flake.nix
+    - name: Commit and push flake.nix update
+      run: |
+        set -euo pipefail
+
+        if ! git diff --quiet; then
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add flake.nix
+          git commit -m "nix: update flake.nix"
+
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Successfully pushed flake.nix update"
+              exit 0
+            fi
+            echo "Push attempt $attempt failed, pulling and retrying..."
+            git pull --rebase
+            sleep $((attempt*2))
+          done
+
+          echo "Failed to push after retries" >&2
+          exit 1
+        fi
