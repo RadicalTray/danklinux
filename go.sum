@@ -117,6 +117,8 @@ github.com/yaslama/go-wayland/wayland v0.0.0-20250907155644-2874f32d9c34 h1:iTAt
 github.com/yaslama/go-wayland/wayland v0.0.0-20250907155644-2874f32d9c34/go.mod h1:jzmUN5lUAv2O8e63OvcauV4S30rIZ1BvF/PNYE37vDo=
 golang.org/x/crypto v0.42.0 h1:chiH31gIWm57EkTXpwnqf8qeuMUi0yekh6mT2AvFlqI=
 golang.org/x/crypto v0.42.0/go.mod h1:4+rDnOTJhQCx2q7/j6rAN5XDw8kPjeaXEUR2eL94ix8=
+golang.org/x/example/hello v0.0.0-20250915201037-7f05d217867b h1:+gZE2jOdiscYByu0606Uw8Ldir2Cecd39Vq/3IEasRA=
+golang.org/x/example/hello v0.0.0-20250915201037-7f05d217867b/go.mod h1:UhUKOXx5fMcLZxwL20DUrWWBBoRYG9Jvc8FiwZhRHCI=
 golang.org/x/exp v0.0.0-20231006140011-7918f672742d h1:jtJma62tbqLibJ5sFQz8bKtEM8rJBtfilJ2qTU199MI=
 golang.org/x/exp v0.0.0-20231006140011-7918f672742d/go.mod h1:ldy0pHrwJyGW56pPQzzkH36rKxoZW1tw7ZJpeKx+hdo=
 golang.org/x/net v0.44.0 h1:evd8IRDyfNBMBTTY5XRF1vaZlD+EmWx6x8PkhR04H/I=
