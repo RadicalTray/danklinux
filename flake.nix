@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     gomod2nix = {
-      url = "github:nix-community/gomod2nix";
+      url = "github:nix-community/gomod2nix/v1.7.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
