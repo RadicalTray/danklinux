@@ -31,7 +31,6 @@ require (
 	github.com/sergi/go-diff v1.4.0 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
 	golang.org/x/crypto v0.42.0 // indirect
-	golang.org/x/example/hello v0.0.0-20250915201037-7f05d217867b // indirect
 	golang.org/x/net v0.44.0 // indirect
 )
 
