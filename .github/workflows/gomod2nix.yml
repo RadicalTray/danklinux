@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "go.mod"
+      - "go.sum"
 
 jobs:
   update-gomod2nix_toml:
